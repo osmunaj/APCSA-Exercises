@@ -17,6 +17,8 @@ public class SnakeEyes{
         boolean snakeyes = false;
         while (gamesPlayed < totalGamesPlayed){
             snakeyes = false;
+            numberOfRoles = 0;
+            totalScore = 0;
             while (!snakeyes){
 
                 if (dice1 == 1 && dice2 == 1){
@@ -24,8 +26,6 @@ public class SnakeEyes{
                 }
                 dice1 = dice.nextInt(6);
                 dice2 = dice.nextInt(6);
-                System.out.println(dice1);
-                System.out.println(dice2);
                 totalScore += dice1 + dice2;
                 numberOfRoles += 1;
                 System.out.println(numberOfRoles);
