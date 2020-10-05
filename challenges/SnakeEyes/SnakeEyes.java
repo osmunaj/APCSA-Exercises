@@ -1,17 +1,16 @@
 import java.util.Random;
 
-
 public class SnakeEyes{
     public static void main(String[] args){
         Random dice = new Random();
-        int dice1 = 0;
-        int dice2 = 0;
-        int totalScore = 0;
-        int totalTotalScore = 0;
-        int gamesPlayed = 0;
-        int totalGamesPlayed = 10;
-        int numberOfRoles = 0;
-        int totalNumberOfRoles = 0;
+        double dice1 = 0;
+        double dice2 = 0;
+        double totalScore = 0;
+        double totalTotalScore = 0;
+        double gamesPlayed = 0;
+        double totalGamesPlayed = 100000;
+        double numberOfRoles = 0;
+        double totalNumberOfRoles = 0;
         int moreThanFourRoles = 0;
        
         boolean snakeyes = false;
@@ -27,8 +26,7 @@ public class SnakeEyes{
                 dice1 = dice.nextInt(6);
                 dice2 = dice.nextInt(6);
                 totalScore += dice1 + dice2;
-                numberOfRoles += 1;
-                System.out.println(numberOfRoles);
+                numberOfRoles += 1.0;
                 if (numberOfRoles > 4) {
                     moreThanFourRoles += 1;
                 }
@@ -41,7 +39,7 @@ public class SnakeEyes{
         double averageNumberOfRoles = totalNumberOfRoles / totalGamesPlayed;
         double averageScore = totalTotalScore / totalGamesPlayed;
 
-        System.out.println(moreThanFourRoles);
+        System.out.println("The number of roles more than 4 was " + moreThanFourRoles);
         System.out.println("The average number of roles was " + averageNumberOfRoles);
         System.out.println("The average score was " + averageScore);
         System.out.println("The percent of players that had more than 4 roles was " + percentOfMoreThanFour + "%");
